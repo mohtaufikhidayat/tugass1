@@ -1,8 +1,10 @@
 from django.contrib import admin
-from django.urls import path
-from beranda import views
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', include('beranda.urls')),
+    path('taufik/', include('pinjambuku.urls')),
+
 ]
